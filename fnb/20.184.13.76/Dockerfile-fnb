@@ -1,0 +1,5 @@
+FROM bys-cd.chinacloudapp.cn/library/openjdk:8
+VOLUME /tmp
+ADD fnb-admin.jar app.jar
+RUN bash -c 'touch /app.jar'
+ENTRYPOINT ["sh","-c","java $PARAMS -jar /app.jar"]  

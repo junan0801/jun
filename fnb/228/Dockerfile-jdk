@@ -1,0 +1,4 @@
+FROM  bys-cd.chinacloudapp.cn/library/openjdk:8
+ADD fnb-admin.jar  /opt
+ADD startup.sh   /opt
+ENTRYPOINT ["/opt/startup.sh"]
